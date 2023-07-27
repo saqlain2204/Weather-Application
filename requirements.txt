@@ -1,3 +1,4 @@
 python-dotenv
 os-sys
 streamlit==1.25.0
+requests
