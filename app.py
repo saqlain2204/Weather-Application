@@ -37,7 +37,7 @@ def display(city, response):
         st.write(f"Humidity: {humidity}%")
         st.write(f"Pressure: {pressure} hPa")
     else:
-        st.error("Error fetching weather data. Please check the city name or your API key.")
+        st.error("Error fetching weather data. Please check the city name ")
 
 def main():
     st.title("Weather App")
