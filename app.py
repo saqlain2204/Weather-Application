@@ -29,19 +29,19 @@ def display(city, response):
         temperature_celsius = round(temperature - 273.15, 2)
 
         # Display the weather forecast
-        st.subheader(f"Weather in {city}")
+        st.subheader(f"Weather in :green[{city}]")
         st.image(f'https://openweathermap.org/img/wn/{icon}.png')
-        st.write(f"Temperature: {temperature_celsius}°C")
-        st.write(f"Description: {descr}")
-        st.write(f"Status: {main}")
-        st.write(f"Humidity: {humidity}%")
-        st.write(f"Pressure: {pressure} hPa")
+        st.write(f":blue[Temperature:] :green[{temperature_celsius}°C]")
+        st.write(f":blue[Description:] :green[{descr}]")
+        st.write(f":blue[Status:] :green[{main}]")
+        st.write(f":blue[Humidity:] :green[{humidity}%]")
+        st.write(f":blue[Pressure:] :green[{pressure} hPa]")
     else:
         st.error("Error fetching weather data. Please check the city name ")
 
 def main():
     st.title("Weather App")
-    city = st.text_input("Enter city name", "London")
+    city = st.text_input("Enter city name", "Bangalore").capitalize()
     response = get_data(city)
     display(city, response)
     print(f"Number of API requests made: {st.session_state.count}")
